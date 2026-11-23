@@ -1,0 +1,136 @@
+<!doctype html>
+<html data-theme="dark" lang="en"><head>
+<!-- Page metadata and shared front-end dependencies. --><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="IT 359 VSOC operations overview with enclave status and priority decisions." name="description"/><title>IT 359 VSOC | Operations Overview</title><link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/><link href="css/styles.css" rel="stylesheet"/><script defer="" src="js/interactive.js"></script></head><body><div class="app-shell">
+<!-- Shared sidebar navigation between the three VSOC views. -->
+<aside class="sidebar">
+<div class="brand">
+<div class="brand-mark">IT</div>
+<div>
+<div class="brand-name">IT 359 VSOC</div>
+<div class="brand-subtitle">Dashboard</div>
+</div>
+</div>
+<div class="nav-label">Dashboard</div>
+<a class="nav-link active" href="index.html"><span class="nav-index">01</span>Operations Overview</a>
+<a class="nav-link" href="incident.html"><span class="nav-index">02</span>Incident Response</a>
+<a class="nav-link" href="data.html"><span class="nav-index">03</span>Data + Reports</a>
+<div class="sidebar-footer">
+<div class="footer-status"><span class="status-dot"></span>Dashboard available</div>
+<div>IT 359 VSOC view</div>
+</div>
+</aside><main class="main-area"><section class="app-page active">
+<!-- Page header summarizes the current Operations Overview view. -->
+<header class="topbar">
+<div>
+<div class="eyebrow">IT 359 VSOC</div>
+<h1 class="page-title">Operations Overview</h1>
+<p class="page-description">Immediate status, enclave posture, open work, and decisions requiring action</p>
+</div>
+<div class="topbar-badges">
+<span class="badge badge-info">CURRENT VIEW</span>
+<span class="badge">UPDATED 14:00 GMT</span>
+</div>
+</header>
+<div class="page-wrap">
+<!-- Operational Snapshot: high-level metrics intended for immediate situational awareness. -->
+<div class="section-heading">
+<div>
+<h2>Operational Snapshot</h2>
+<p>The few measures a user should understand immediately after opening the dashboard</p>
+</div>
+<button class="btn btn-info guide-button guide-trigger" data-guide-title="Operational Snapshot" data-guide-what="The five cards summarize current alert volume, active incidents, missed response targets, visibility gaps, and actions due." data-guide-why="These measures provide a quick risk and workload check before the user opens detailed incident or reporting views." type="button">Learn More</button>
+</div>
+<section class="kpi-grid">
+<article class="kpi-card"><div class="kpi-top"><span class="kpi-label">Open Alerts</span><span class="mini-pulse cyan"></span></div><div class="kpi-value accent-cyan">18</div><div class="kpi-detail"><strong>6</strong> require action</div></article>
+<article class="kpi-card"><div class="kpi-top"><span class="kpi-label">Active Incidents</span><span class="mini-pulse amber"></span></div><div class="kpi-value accent-amber">1</div><div class="kpi-detail">Sev 2 / R&amp;D</div></article>
+<article class="kpi-card"><div class="kpi-top"><span class="kpi-label">SLA Misses</span><span class="mini-pulse red"></span></div><div class="kpi-value accent-red">3</div><div class="kpi-detail">Overdue remediation</div></article>
+<article class="kpi-card"><div class="kpi-top"><span class="kpi-label">Logging Gaps</span><span class="mini-pulse purple"></span></div><div class="kpi-value accent-purple">4</div><div class="kpi-detail">Visibility review needed</div></article>
+<article class="kpi-card"><div class="kpi-top"><span class="kpi-label">Actions Due</span><span class="mini-pulse green"></span></div><div class="kpi-value accent-green">5</div><div class="kpi-detail">Before next update</div></article>
+</section>
+<!-- Active incident summary keeps the highest-priority case visible from the overview. -->
+<article class="active-incident-strip">
+<div class="active-incident-title">
+<span class="severity-ribbon">SEV 2</span>
+<div>
+<div class="strip-kicker">ACTIVE INCIDENT</div>
+<div class="strip-title">IT359-IR-2026-002 · Participating-Organization Account Compromise</div>
+</div>
+</div>
+<div class="strip-stat"><span>Opened</span><strong>13:31 GMT</strong></div>
+<div class="strip-stat"><span>Phase</span><strong>Analyze / Scope</strong></div>
+<div class="strip-stat"><span>OOB</span><strong class="accent-green">Active</strong></div>
+<div class="strip-stat"><span>Next Update</span><strong>14:30 GMT</strong></div>
+<div class="strip-actions">
+<button class="btn btn-info guide-button guide-trigger" data-guide-title="Active Incident Strip" data-guide-what="This strip summarizes the highest-priority active incident: its identifier, severity, opening time, current phase, out-of-band communication status, and next scheduled update." data-guide-why="It lets leadership recognize the current incident posture immediately, while the detailed incident view remains available for operator-level information." type="button">Learn More</button>
+</div>
+</article>
+<div class="section-heading">
+<div>
+<h2>Enclave Status</h2>
+<p>Current operational condition across the three IT 359 VSOC enclaves</p>
+</div>
+<button class="btn btn-info guide-button" id="openEnclaveGuide" type="button">Learn More</button>
+</div>
+<!-- Enclave cards show the current posture of each VSOC enclave. -->
+<section class="enclave-grid">
+<article class="enclave-card status-degraded">
+<div class="enclave-top"><div><div class="enclave-name">R&amp;D Enclave</div><div class="enclave-sub">Account / GitLab / AWS activity</div></div><span class="badge badge-error">DEGRADED</span></div>
+<div class="enclave-description">Function and confidence are reduced while the account and pipeline activity are scoped.</div>
+<div class="enclave-footer"><span>Owner: R&amp;D Program POC</span><span>Update: 14:30 GMT</span></div>
+</article>
+<article class="enclave-card status-monitoring">
+<div class="enclave-top"><div><div class="enclave-name">T&amp;E Enclave</div><div class="enclave-sub">Shared-service watch</div></div><span class="badge badge-warning">MONITORING</span></div>
+<div class="enclave-description">No confirmed impact; monitoring continues because the incident touches shared identity and cloud services.</div>
+<div class="enclave-footer"><span>Owner: T&amp;E POC</span><span>No blocker</span></div>
+</article>
+<article class="enclave-card status-monitoring">
+<div class="enclave-top"><div><div class="enclave-name">Transition Enclave</div><div class="enclave-sub">Shared-service watch</div></div><span class="badge badge-warning">MONITORING</span></div>
+<div class="enclave-description">No confirmed impact; monitoring continues while shared-platform trust is assessed.</div>
+<div class="enclave-footer"><span>Owner: Transition POC</span><span>No confirmed impact</span></div>
+</article>
+</section>
+<!-- Priority decision area directs the user to the next leadership/operator action. -->
+<div class="decision-strip">
+<div class="decision-main">
+<div class="decision-heading-row">
+<span class="next-priority-label">Next Priority Decision</span>
+<button class="btn btn-info guide-button guide-trigger" data-guide-title="Next Priority Decision" data-guide-what="This strip displays the single decision or approval that currently has the greatest effect on incident progress." data-guide-why="A clearly stated priority decision helps the responsible leader understand exactly what must be approved, why it matters now, and which detailed view to open for supporting context." type="button">Learn More</button>
+</div>
+<strong>Authorize token and session restriction and freeze the affected GitLab runner while scope is confirmed.</strong>
+</div>
+<div class="decision-actions">
+<a class="btn btn-info wide-action" href="incident.html">Review Incident</a>
+<a class="btn btn-info wide-action" href="data.html">View Data Context</a>
+</div>
+</div>
+</div>
+</section></main></div>
+<!-- Reusable guidance modal populated by js/interactive.js from each Learn More button. -->
+<dialog class="modal" id="guideModal">
+<div class="modal-box">
+<div class="modal-kicker">DASHBOARD GUIDE</div>
+<h3 id="guideTitle">Dashboard Guide</h3>
+<div class="guide-grid">
+<div class="guide-block"><span>What it shows</span><p id="guideWhat"></p></div>
+<div class="guide-block"><span>Why it matters</span><p id="guideWhy"></p></div>
+</div>
+<div class="modal-actions"><button class="btn btn-info" data-close-dialog="guideModal" type="button">Close</button></div>
+</div>
+</dialog>
+<!-- Enclave-specific modal explains the meaning of each status category. -->
+<dialog class="modal" id="enclaveGuideModal">
+<div class="modal-box">
+<div class="modal-kicker">ENCLAVE STATUS GUIDE</div>
+<h3>How to read the enclave status cards</h3>
+<p>The cards show whether each IT 359 VSOC enclave is affected and where it is in the response or recovery process. The same six values should be used consistently across incidents.</p>
+<div class="status-definition-grid">
+<div class="status-definition-row"><strong class="accent-green">Not Affected</strong><span>No known impact has been identified.</span></div>
+<div class="status-definition-row"><strong class="accent-amber">Monitoring</strong><span>No impact is confirmed, but the enclave is being watched because of a related event.</span></div>
+<div class="status-definition-row"><strong class="accent-red">Degraded</strong><span>Functionality or confidence is reduced.</span></div>
+<div class="status-definition-row"><strong class="accent-cyan">Contained</strong><span>Known spread has been stopped or limited.</span></div>
+<div class="status-definition-row"><strong class="accent-purple">Recovering</strong><span>Trusted restoration and validation are underway.</span></div>
+<div class="status-definition-row"><strong class="accent-green">Restored</strong><span>Functionality and security validation are complete.</span></div>
+</div>
+<div class="modal-actions"><button class="btn btn-info" data-close-dialog="enclaveGuideModal" type="button">Close</button></div>
+</div>
+</dialog></body></html>

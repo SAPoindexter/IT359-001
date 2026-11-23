@@ -1,0 +1,206 @@
+<!doctype html>
+<html data-theme="dark" lang="en"><head>
+<!-- Page metadata and shared front-end dependencies. --><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="IT 359 VSOC data context, measures, trends, and incident closeout view." name="description"/><title>IT 359 VSOC | Data + Reports</title><link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/><link href="css/styles.css" rel="stylesheet"/><script defer="" src="js/interactive.js"></script></head><body><div class="app-shell">
+<!-- Shared sidebar navigation plus analytics context for this reporting view. -->
+<aside class="sidebar">
+<div class="brand">
+<div class="brand-mark">IT</div>
+<div>
+<div class="brand-name">IT 359 VSOC</div>
+<div class="brand-subtitle">Dashboard</div>
+</div>
+</div>
+<div class="nav-label">Dashboard</div>
+<a class="nav-link" href="index.html"><span class="nav-index">01</span>Operations Overview</a>
+<a class="nav-link" href="incident.html"><span class="nav-index">02</span>Incident Response</a>
+<a class="nav-link active" href="data.html"><span class="nav-index">03</span>Data + Reports</a>
+<div class="nav-label">Analytics Focus</div>
+<div class="analytics-card">
+<strong>REPORTING WINDOW</strong>
+          24-hour operational view<br/>
+          Linked incident: IT359-IR-2026-002<br/>
+          Linked dataset: DS-014
+        </div>
+<div class="sidebar-footer">
+<div class="footer-status"><span class="status-dot"></span>Dashboard available</div>
+<div>IT 359 VSOC view</div>
+</div>
+</aside><main class="main-area"><section class="app-page active">
+<!-- Data + Reports header identifies the analytics view and linked incident. -->
+<header class="topbar">
+<div>
+<div class="eyebrow">IT 359 VSOC / ANALYTICS</div>
+<h1 class="page-title">Data + Reports</h1>
+<p class="page-description">Data-related context, operational measures, trends, and incident closeout work</p>
+</div>
+<div class="topbar-badges">
+<span class="badge badge-secondary">DATA RELATED</span>
+<span class="badge badge-info">IT359-IR-2026-002</span>
+</div>
+</header>
+<div class="page-wrap">
+<!-- Operational measures summarize response speed, alert quality, activity, and visibility. -->
+<div class="section-heading">
+<div><h2>Operational Measures</h2><p>Selected measures for response speed, alert quality, activity volume, and visibility</p></div>
+<button class="btn btn-info guide-button guide-trigger" data-guide-title="Operational Measures" data-guide-what="The five values summarize response speed, alert quality, current activity volume, and logging coverage." data-guide-why="Together they help leadership and the vSOC judge whether response performance and visibility are improving, remaining stable, or creating operational risk." type="button">Learn More</button>
+</div>
+<!-- Metric ticker presents the most important quantitative measures at a glance. -->
+<section class="ticker-grid metric-ticker">
+<div class="ticker-cell"><div class="ticker-label">MTTA</div><div class="ticker-value accent-green">7m</div><div class="ticker-delta">Mean time to acknowledge</div></div>
+<div class="ticker-cell"><div class="ticker-label">MTTR</div><div class="ticker-value accent-cyan">2h 18m</div><div class="ticker-delta">Mean time to respond / recover</div></div>
+<div class="ticker-cell"><div class="ticker-label">False Positive Rate</div><div class="ticker-value accent-amber">12%</div><div class="ticker-delta">Down 3 percentage points</div></div>
+<div class="ticker-cell"><div class="ticker-label">Alert Volume</div><div class="ticker-value accent-purple">64</div><div class="ticker-delta">Selected 24-hour window</div></div>
+<div class="ticker-cell"><div class="ticker-label">Logging Coverage</div><div class="ticker-value accent-green">93%</div><div class="ticker-delta">Average across enclaves</div></div>
+</section>
+<!-- Reporting workspace combines data context, charts, monitoring coverage, and closeout work. -->
+<section class="bloomberg-grid">
+<!-- Linked Data Context connects the active incident to the affected/notional dataset. -->
+<!-- Logging coverage shows visibility across the three VSOC enclaves. -->
+<!-- Response-time trend visualizes whether response performance is improving. -->
+<!-- Alert-type ranking summarizes the most common categories in the example data. -->
+<article class="panel terminal-panel span-4">
+<div class="panel-header">
+<div><h2 class="panel-title">Linked Data Context</h2><div class="panel-subtitle">Displayed because the active incident touched a dataset path</div></div>
+<div class="panel-tools"><span class="terminal-code">DATA.DS-014</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Linked Data Context" data-guide-what="This panel shows the limited data-card facts needed during a data-related incident: source, owner, approved use, sharing restriction, location, version, size, and delivery date." data-guide-why="The same technical alert may require different containment, notification, evidence, or closure steps depending on the affected data and its restrictions." type="button">Learn More</button></div>
+</div>
+<div class="panel-body">
+<div class="data-card-title">Synthetic Sensor Trial v2</div>
+<div class="data-card-grid">
+<div class="data-cell"><div class="label">Source</div><div class="value">Notional program delivery</div></div>
+<div class="data-cell"><div class="label">Owner</div><div class="value">Program Data Owner</div></div>
+<div class="data-cell"><div class="label">Approved Use</div><div class="value">Approved project use only</div></div>
+<div class="data-cell"><div class="label">Sharing</div><div class="value">Approved project users only</div></div>
+<div class="data-cell"><div class="label">Location</div><div class="value">R&amp;D AWS dataset path</div></div>
+<div class="data-cell"><div class="label">Version</div><div class="value">v2.0</div></div>
+<div class="data-cell"><div class="label">Size</div><div class="value">24.8 GB</div></div>
+<div class="data-cell"><div class="label">Delivered</div><div class="value">21 July 2026</div></div>
+</div>
+<div class="required-check"><strong>Required check:</strong> Confirm whether the pipeline copied or changed data before incident closure.</div>
+</div>
+</article>
+<!-- Alert-volume chart illustrates how activity changes during the selected reporting window. -->
+<article class="panel terminal-panel span-8">
+<div class="panel-header">
+<h2 class="panel-title">Alert Volume Over Time</h2>
+<div class="panel-tools"><span class="terminal-code">METRIC.ALERT.RATE</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Alert Volume Over Time" data-guide-what="This chart shows how alert activity changed during the selected 24-hour period." data-guide-why="A sudden increase or unusual pattern can point to a developing incident, a configuration problem, or a change in monitoring behavior that needs investigation." type="button">Learn More</button></div>
+</div>
+<div class="chart-shell">
+<svg aria-label="Alert volume over time" class="line-chart" role="img" viewbox="0 0 760 240">
+<defs><lineargradient id="lineFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#43d9ef" stop-opacity=".35"></stop><stop offset="100%" stop-color="#43d9ef" stop-opacity="0"></stop></lineargradient></defs>
+<line class="grid-line" x1="45" x2="735" y1="35" y2="35"></line><line class="grid-line" x1="45" x2="735" y1="90" y2="90"></line><line class="grid-line" x1="45" x2="735" y1="145" y2="145"></line><line class="grid-line" x1="45" x2="735" y1="200" y2="200"></line>
+<path class="chart-area-fill" d="M45,175 L160,154 L275,74 L390,125 L505,48 L620,102 L735,140 L735,200 L45,200 Z"></path>
+<polyline class="chart-line" points="45,175 160,154 275,74 390,125 505,48 620,102 735,140"></polyline>
+<circle class="chart-point" cx="45" cy="175" r="6"></circle><circle class="chart-point" cx="160" cy="154" r="6"></circle><circle class="chart-point" cx="275" cy="74" r="6"></circle><circle class="chart-point" cx="390" cy="125" r="6"></circle><circle class="chart-point" cx="505" cy="48" r="6"></circle><circle class="chart-point" cx="620" cy="102" r="6"></circle><circle class="chart-point" cx="735" cy="140" r="6"></circle>
+<text class="chart-axis" x="38" y="229">00</text><text class="chart-axis" x="151" y="229">04</text><text class="chart-axis" x="266" y="229">08</text><text class="chart-axis" x="381" y="229">12</text><text class="chart-axis" x="496" y="229">16</text><text class="chart-axis" x="611" y="229">20</text><text class="chart-axis" x="723" y="229">24</text>
+</svg>
+</div>
+</article>
+<article class="panel terminal-panel span-4">
+<div class="panel-header">
+<h2 class="panel-title">Logging + Monitoring Coverage</h2>
+<div class="panel-tools"><span class="terminal-code">METRIC.COVERAGE</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Logging and Monitoring Coverage" data-guide-what="The bars show the percentage of expected telemetry available from each enclave and the known number of visibility gaps." data-guide-why="Coverage gaps create blind spots, making it harder to understand incident scope, confirm containment, and validate recovery." type="button">Learn More</button></div>
+</div>
+<div class="panel-body coverage-list">
+<div class="coverage-row"><div><span>R&amp;D</span><small>4 known gaps</small></div><div class="coverage-bar"><i style="width:86%"></i></div><strong>86%</strong></div>
+<div class="coverage-row"><div><span>T&amp;E</span><small>2 known gaps</small></div><div class="coverage-bar"><i style="width:94%"></i></div><strong>94%</strong></div>
+<div class="coverage-row"><div><span>Transition</span><small>1 known gap</small></div><div class="coverage-bar"><i style="width:98%"></i></div><strong>98%</strong></div>
+</div>
+</article>
+<article class="panel terminal-panel span-4">
+<div class="panel-header">
+<h2 class="panel-title">Response Time Trend</h2>
+<div class="panel-tools"><span class="terminal-code">METRIC.RESPONSE</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Response Time Trend" data-guide-what="This chart shows how response time changes across recent incidents or reporting periods." data-guide-why="The trend helps users see whether process changes are actually improving response speed or whether delays are increasing." type="button">Learn More</button></div>
+</div>
+<div class="chart-shell">
+<svg aria-label="Response time trend" class="mini-line-chart" role="img" viewbox="0 0 420 190">
+<line class="grid-line" x1="25" x2="405" y1="30" y2="30"></line><line class="grid-line" x1="25" x2="405" y1="85" y2="85"></line><line class="grid-line" x1="25" x2="405" y1="140" y2="140"></line>
+<polyline class="chart-line purple-line" points="25,42 100,62 175,76 250,97 325,111 405,130"></polyline>
+<circle class="chart-point purple-point" cx="25" cy="42" r="5"></circle><circle class="chart-point purple-point" cx="100" cy="62" r="5"></circle><circle class="chart-point purple-point" cx="175" cy="76" r="5"></circle><circle class="chart-point purple-point" cx="250" cy="97" r="5"></circle><circle class="chart-point purple-point" cx="325" cy="111" r="5"></circle><circle class="chart-point purple-point" cx="405" cy="130" r="5"></circle>
+<text class="chart-axis" x="20" y="175">1</text><text class="chart-axis" x="94" y="175">2</text><text class="chart-axis" x="169" y="175">3</text><text class="chart-axis" x="244" y="175">4</text><text class="chart-axis" x="319" y="175">5</text><text class="chart-axis" x="397" y="175">6</text>
+</svg>
+<div class="trend-callout"><span>Average response time</span><strong class="accent-green">Improving</strong></div>
+</div>
+</article>
+<article class="panel terminal-panel span-4">
+<div class="panel-header">
+<h2 class="panel-title">Top Alert Types</h2>
+<div class="panel-tools"><span class="terminal-code">ALERT.RANK</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Top Alert Types" data-guide-what="This panel ranks the most common categories of alerts in the selected reporting period." data-guide-why="It helps show where analyst workload and recurring security activity are concentrated, which can guide rule tuning and readiness priorities." type="button">Learn More</button></div>
+</div>
+<div class="panel-body bar-list">
+<div class="bar-row"><span>Credential</span><div class="bar-track"><div class="bar-fill red" style="width:100%"></div></div><span class="bar-value">18</span></div>
+<div class="bar-row"><span>Repository</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><span class="bar-value">14</span></div>
+<div class="bar-row"><span>Vulnerability</span><div class="bar-track"><div class="bar-fill purple" style="width:61%"></div></div><span class="bar-value">11</span></div>
+<div class="bar-row"><span>Logging</span><div class="bar-track"><div class="bar-fill" style="width:44%"></div></div><span class="bar-value">8</span></div>
+<div class="bar-row"><span>Network</span><div class="bar-track"><div class="bar-fill" style="width:33%"></div></div><span class="bar-value">6</span></div>
+</div>
+</article>
+<!-- Inbound-port panel highlights example network-connection observations. -->
+<!-- Related work panel links reporting information to broader VSOC tasks. -->
+<article class="panel terminal-panel span-6">
+<div class="panel-header">
+<h2 class="panel-title">Top Inbound Port Connections</h2>
+<div class="panel-tools"><span class="terminal-code">NET.INBOUND</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Top Inbound Port Connections" data-guide-what="This panel shows the most frequently observed inbound destination ports and their relative connection counts." data-guide-why="It is a common SOC view for understanding normal network exposure and spotting unusual changes. The counts provide context, but a high value alone does not prove malicious activity." type="button">Learn More</button></div>
+</div>
+<div class="panel-body bar-list">
+<div class="bar-row"><span>443 / HTTPS</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">48</span></div>
+<div class="bar-row"><span>22 / SSH</span><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div><span class="bar-value">19</span></div>
+<div class="bar-row"><span>3389 / RDP</span><div class="bar-track"><div class="bar-fill red" style="width:25%"></div></div><span class="bar-value">12</span></div>
+<div class="bar-row"><span>80 / HTTP</span><div class="bar-track"><div class="bar-fill" style="width:21%"></div></div><span class="bar-value">10</span></div>
+<div class="bar-row"><span>53 / DNS</span><div class="bar-track"><div class="bar-fill purple" style="width:15%"></div></div><span class="bar-value">7</span></div>
+</div>
+</article>
+<article class="panel terminal-panel span-6">
+<div class="panel-header">
+<h2 class="panel-title">Related vSOC Work</h2>
+<div class="panel-tools"><span class="terminal-code">CASE.LINKS</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Related vSOC Work" data-guide-what="This table connects the incident to the originating alert, data context, open follow-up work, and reporting item." data-guide-why="It helps users follow the incident across related vSOC records without repeating the full content of each record on the same page." type="button">Learn More</button></div>
+</div>
+<div class="table-container">
+<table class="soc-table" style="min-width:700px">
+<thead><tr><th>Type</th><th>Related Item</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Alert</td><td>Unusual account and token activity</td><td><span class="badge badge-error">ESCALATED</span></td></tr>
+<tr><td>Incident</td><td>IT359-IR-2026-002</td><td><span class="badge badge-info">ACTIVE</span></td></tr>
+<tr><td>Data</td><td>DS-014 access-path check</td><td><span class="badge badge-warning">OPEN</span></td></tr>
+<tr><td>Report</td><td>Situation update</td><td><span class="badge badge-secondary">14:30 GMT</span></td></tr>
+</tbody>
+</table>
+</div>
+</article>
+<!-- Incident Closeout captures the final checks required before the case is closed. -->
+<article class="panel terminal-panel span-12">
+<div class="panel-header">
+<h2 class="panel-title">Incident Closeout</h2>
+<div class="panel-tools"><span class="terminal-code">CASE.CLOSEOUT</span><button class="btn btn-info guide-button guide-trigger" data-guide-title="Incident Closeout" data-guide-what="This table combines the main closeout items—lessons learned, corrective actions, runbook updates, data checks, and report outputs—with an owner, due date, and status." data-guide-why="It turns the incident outcome into accountable follow-up work, makes unresolved items visible, and preserves reusable knowledge for future IT 359 VSOC programs." type="button">Learn More</button></div>
+</div>
+<div class="table-container">
+<table class="soc-table closeout-table">
+<thead><tr><th>Type</th><th>Item</th><th>Owner</th><th>Due</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><span class="closeout-type lesson">Lesson</span></td><td>Correlate GitLab token creation and AWS activity earlier during account triage.</td><td>vSOC Lead</td><td>AAR</td><td><span class="badge badge-success">CAPTURED</span></td></tr>
+<tr><td><span class="closeout-type action">Corrective Action</span></td><td>Add token-creation detection and cross-account correlation.</td><td>vSOC Lead</td><td>09 Aug</td><td><span class="badge badge-info">PLANNED</span></td></tr>
+<tr><td><span class="closeout-type runbook">Runbook Update</span></td><td>Update participating-account and GitLab-token response steps.</td><td>Security Lead</td><td>10 Aug</td><td><span class="badge badge-warning">IN PROGRESS</span></td></tr>
+<tr><td><span class="closeout-type data">Data Check</span></td><td>Validate dataset restrictions and whether data was copied or modified.</td><td>Data Owner</td><td>Before close</td><td><span class="badge badge-error">OPEN</span></td></tr>
+<tr><td><span class="closeout-type report">Report Output</span></td><td>Finalize situation-report inputs and preserve final-report fields.</td><td>Incident Scribe</td><td>14:30 GMT</td><td><span class="badge badge-secondary">READY</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="panel-body button-row">
+<a class="btn btn-info" href="incident.html">Return to Incident</a>
+<a class="btn btn-outline" href="index.html">Return to Overview</a>
+</div>
+</article>
+</section>
+</div>
+</section></main></div>
+<!-- Shared Learn More modal; JavaScript fills in the selected section guidance. -->
+<dialog class="modal" id="guideModal">
+<div class="modal-box">
+<div class="modal-kicker">DASHBOARD GUIDE</div>
+<h3 id="guideTitle">Dashboard Guide</h3>
+<div class="guide-grid">
+<div class="guide-block"><span>What it shows</span><p id="guideWhat"></p></div>
+<div class="guide-block"><span>Why it matters</span><p id="guideWhy"></p></div>
+</div>
+<div class="modal-actions"><button class="btn btn-info" data-close-dialog="guideModal" type="button">Close</button></div>
+</div>
+</dialog></body></html>
